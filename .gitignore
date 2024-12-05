@@ -33,7 +33,7 @@ bin/
 *.iml
 
 ### aoc ###
-./resources/
+resources/
 
 ### Mac OS ###
 .DS_Store
