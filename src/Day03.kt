@@ -25,9 +25,10 @@ private data class Instruction(val input: String) {
         return mul(input)
     }
 
+    //The logic behind this is that we simply should ignore/replace whatever comes between don't()...do()
+    //After replacing "corrupted" matches with empty string we can simply reuse cleaned out output to calculate result as in task1
+
     fun mulCorrupted(): Long {
-        val allMatches = mulDoNotDoRegex.findAll(input)
-        println("Number of matches: ${allMatches.count()}")
         val cleanInput = mulDoNotDoRegex.replace(input, "")
         return mul(cleanInput)
     }
